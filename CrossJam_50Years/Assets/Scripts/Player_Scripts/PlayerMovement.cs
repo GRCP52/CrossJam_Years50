@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerMovementJon : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     public PlayerController2D controller;
