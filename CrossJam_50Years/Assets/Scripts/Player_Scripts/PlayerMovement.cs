@@ -5,23 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Rigidbody2D body;
-    public float velH;
-    
+	// Use this for initialization
 	void Start ()
     {
-
-        MoveHorizontally();
-
-    }
+		
+	}
 	
+	// Update is called once per frame
 	void Update ()
     {
 		
 	}
-
-    void MoveHorizontally ()
-    {
-
-    }
 }
