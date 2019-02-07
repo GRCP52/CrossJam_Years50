@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class F_Script : MonoBehaviour {
 
-    public GameObject Player;
+    public GameObject thePlayer;
 
     public float runSpeed;
     public float depressionDuration = 5000f;
@@ -14,16 +14,18 @@ public class F_Script : MonoBehaviour {
 
     private void Update()
     {
-        GetComponent<PlayerMovementJon>().runSpeed = runSpeed;
+        GetComponent<PlayerMovement>().runSpeed = runSpeed;
 
         DepressionUpdate();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        failed = true;
-        Destroy(col.gameObject);
-        StartDepression();
+        if (col.CompareTag("F_Obstacle"))
+        {
+            Destroy(col.gameObject);
+            StartDepression();
+        }
     }
 
     private void DepressionUpdate ()
@@ -42,14 +44,12 @@ public class F_Script : MonoBehaviour {
     {
         runSpeed = 0f;
         depressionDurationLeft = depressionDuration;
-        Debug.Log("Esta merda esta repetida");
     }
 
     private void StopDepression ()
     {
         runSpeed = 40f;
         failed = false;
-        Debug.Log("this should work");
     }
 
 }

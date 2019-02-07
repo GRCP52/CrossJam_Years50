@@ -9,10 +9,10 @@ public class ObstacleAssignment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-
-        Destroy(col.gameObject);
-        thePlayer.GetComponent<PlayerMovement>().runSpeed *= 0.90f;
-
+        if (col.CompareTag("Assignment_Obstacle"))
+        {
+            Destroy(col.gameObject);
+            thePlayer.GetComponent<PlayerMovement>().runSpeed *= 0.90f;
+        }
     }
-
 }
