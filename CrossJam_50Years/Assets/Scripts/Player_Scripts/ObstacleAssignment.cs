@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObstacleAssignment : MonoBehaviour
 {
-
     public GameObject thePlayer;
 
     private void OnTriggerEnter2D(Collider2D col)
