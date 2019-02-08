@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManaging : MonoBehaviour {
 
@@ -14,6 +16,9 @@ public class GameManaging : MonoBehaviour {
     private float spawningSpot;
     public Transform destroySpot;
 
+    public float counter;
+    public Text counterText;
+
     private void Awake()
     {
         fObstacleCooldown = Random.Range(2f, 6f);
@@ -26,6 +31,17 @@ public class GameManaging : MonoBehaviour {
         spawningSpot = mainCamera.position.x + 12.5f;
 
         SpawningF();
+
+        //GameOver();
+    }
+
+    private void FixedUpdate()
+    {
+        counter -= Time.deltaTime;
+
+        SetCounter();
+
+        GameOver();
     }
 
     private void SpawningF()
@@ -41,5 +57,19 @@ public class GameManaging : MonoBehaviour {
             fObstacleTimer = Time.time + fObstacleCooldown;
         }
 
+    }
+
+    private void SetCounter()
+    {
+        counterText.text = counter.ToString();
+    }
+
+    private void GameOver()
+    {
+        if (counter <= 0)
+        {
+            counter = 0;
+            SceneManager.LoadScene("Level_Selector");
+        }
     }
 }
