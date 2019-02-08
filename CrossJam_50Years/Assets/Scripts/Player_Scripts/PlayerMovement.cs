@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
+        
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             anim.SetTrigger("Jump");
@@ -36,5 +37,13 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+
+        if (col.gameObject.tag == "End")
+            SceneManager.LoadScene("Level_Selector");
+
     }
 }
