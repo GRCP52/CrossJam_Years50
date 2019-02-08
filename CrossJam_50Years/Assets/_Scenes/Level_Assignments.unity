@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666fff2f37e6ed64f97caed85325a329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 830487638}
+  target: {fileID: 0}
   smoothSpeed: 0.125
   offset: {x: 0, y: 2, z: -10}
 --- !u!20 &519420031
@@ -395,7 +395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &759966291
 GameObject:
@@ -569,28 +569,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 759966291}
   m_CullTransparentMesh: 0
---- !u!1 &830487633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1358005186916398, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-    type: 2}
-  m_PrefabInternal: {fileID: 972368889}
---- !u!4 &830487638 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4112997075537754, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-    type: 2}
-  m_PrefabInternal: {fileID: 972368889}
---- !u!114 &830487641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 830487633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af289a1b8cf9b0a43853536f5d107c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thePlayer: {fileID: 830487633}
 --- !u!1001 &972368889
 Prefab:
   m_ObjectHideFlags: 0
@@ -631,6 +609,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1358005186916398, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685115433072266, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

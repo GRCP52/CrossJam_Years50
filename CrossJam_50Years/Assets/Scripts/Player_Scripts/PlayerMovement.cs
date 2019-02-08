@@ -6,6 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerMovement : MonoBehaviour
 {
 
+    Animator anim;
+
     public PlayerController2D controller;
 
     public float horizontalMove = 1f;
@@ -14,12 +16,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool jump = false;
 
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+
     void Update()
     {
         horizontalMove = runSpeed;
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
+            anim.SetTrigger("Jump");
             jump = true;
         }
     }
