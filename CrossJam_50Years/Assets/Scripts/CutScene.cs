@@ -20,7 +20,7 @@ public class CutScene : MonoBehaviour
         }
     }
 
-    void ChangeScene()
+    public void ChangeScene()
     {
         SceneManager.LoadScene("Level_Selector");
     }
