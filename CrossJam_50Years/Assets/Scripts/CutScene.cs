@@ -6,22 +6,26 @@ public class CutScene : MonoBehaviour
 {
 
     public Transform spot;
-    public Rigidbody2D thePlayer;
+    public GameObject thePlayer;
+    public GameObject emailPanel;
 
-    public bool playerStoped = false;
+    public float cutSceneRunSpeed = 0;
 
-    private void Update()
+    public bool playerStopped = false;
+
+    private void OnCollisionStay2D(Collision2D col)
     {
-        StopMoving();
+        if (col.gameObject.tag == "stopSpot")
+        {
+            StopMoving();
+        }
     }
 
     void StopMoving ()
     {
-        if (spot.position.x <= thePlayer.position.x)
-        {
-            thePlayer.GetComponent<PlayerMovement>().runSpeed = 0;
-            playerStoped = true;
-        }
+        thePlayer.GetComponent<PlayerMovement>().runSpeed = cutSceneRunSpeed;
+        playerStopped = true;
+        emailPanel.SetActive(true);
     }
 
 }

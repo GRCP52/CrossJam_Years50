@@ -12,7 +12,7 @@ public class SceneTransition : MonoBehaviour
 
     private void Update()
     {
-        if(GetComponent<CutScene>().playerStoped)
+        if(GetComponent<CutScene>().playerStopped)
         {
             StartCoroutine(LoadScene());
         }
