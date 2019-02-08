@@ -113,31 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &117363095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1685115433072266, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-    type: 2}
-  m_PrefabInternal: {fileID: 972368889}
---- !u!4 &117363104 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4665815325823306, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-    type: 2}
-  m_PrefabInternal: {fileID: 972368889}
---- !u!114 &117363105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 117363095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6dd222b3bdf6bd498b9918f1e605082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spot: {fileID: 1306908853}
-  thePlayer: {fileID: 117363095}
-  emailPanel: {fileID: 1835701790}
-  playerStopped: 0
 --- !u!1 &136764509
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117363105}
+      - m_Target: {fileID: 1965936519}
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -607,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666fff2f37e6ed64f97caed85325a329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 117363104}
+  target: {fileID: 1965936518}
   smoothSpeed: 0.125
   offset: {x: 0, y: 2, z: -10}
 --- !u!20 &519420031
@@ -719,6 +694,30 @@ Prefab:
         type: 2}
       propertyPath: runSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894717053521258, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215084523625044, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 2}
+      propertyPath: runSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215084523625044, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 2}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 2}
+      propertyPath: realVelocity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215084523625044, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 2}
+      propertyPath: horizontalMove
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
@@ -1072,3 +1071,28 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1835701790}
   m_CullTransparentMesh: 0
+--- !u!1 &1965936509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1801951387515980, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+    type: 2}
+  m_PrefabInternal: {fileID: 972368889}
+--- !u!4 &1965936518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4894717053521258, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+    type: 2}
+  m_PrefabInternal: {fileID: 972368889}
+--- !u!114 &1965936519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965936509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dd222b3bdf6bd498b9918f1e605082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spot: {fileID: 1306908853}
+  thePlayer: {fileID: 1965936509}
+  emailPanel: {fileID: 1835701790}
+  playerStopped: 0
