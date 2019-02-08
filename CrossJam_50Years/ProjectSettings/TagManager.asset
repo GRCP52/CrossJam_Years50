@@ -6,6 +6,7 @@ TagManager:
   tags:
   - F_Obstacle
   - Assignment_Obstacle
+  - stopSpot
   layers:
   - Default
   - TransparentFX

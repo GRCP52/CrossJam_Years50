@@ -9,23 +9,19 @@ public class CutScene : MonoBehaviour
     public GameObject thePlayer;
     public GameObject emailPanel;
 
-    public float cutSceneRunSpeed = 0;
-
     public bool playerStopped = false;
 
     private void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "stopSpot")
         {
-            StopMoving();
+            emailPanel.SetActive(true);
         }
     }
 
-    void StopMoving ()
+    void ChangeScene()
     {
-        thePlayer.GetComponent<PlayerMovement>().runSpeed = cutSceneRunSpeed;
-        playerStopped = true;
-        emailPanel.SetActive(true);
+        SceneManager.LoadScene("Level_Selector");
     }
 
 }
