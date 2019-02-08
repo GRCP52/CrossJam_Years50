@@ -14,7 +14,7 @@ public class F_Script : MonoBehaviour {
 
     private void Update()
     {
-        GetComponent<PlayerMovement>().runSpeed = runSpeed;
+        GetComponent<PlayerController2D>().realVelocity = runSpeed;
 
         DepressionUpdate();
     }

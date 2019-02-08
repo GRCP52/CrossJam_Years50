@@ -11,7 +11,7 @@ public class ObstacleAssignment : MonoBehaviour
         if (col.CompareTag("Assignment_Obstacle"))
         {
             Destroy(col.gameObject);
-            thePlayer.GetComponent<PlayerMovement>().runSpeed *= 0.90f;
+            thePlayer.GetComponent<PlayerController2D>().realVelocity *= 0.90f;
         }
     }
 }

@@ -8,24 +8,22 @@ public class PlayerMovement : MonoBehaviour
 
     Animator anim;
 
-    public PlayerController2D controller;
+    private PlayerController2D controller;
 
     public float horizontalMove = 1f;
-
-    public float runSpeed = 40f;
 
     public bool jump = false;
 
 
     private void Awake()
     {
+        controller = GetComponent<PlayerController2D>();
         anim = GetComponent<Animator>();
     }
 
 
     void Update()
     {
-        horizontalMove = runSpeed;
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
