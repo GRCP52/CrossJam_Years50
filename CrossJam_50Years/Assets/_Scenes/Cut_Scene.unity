@@ -719,6 +719,10 @@ Prefab:
       propertyPath: horizontalMove
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4894717053521258, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc44f5fd4a68a549bf52158f1f48ab2, type: 2}
   m_IsPrefabAsset: 0
