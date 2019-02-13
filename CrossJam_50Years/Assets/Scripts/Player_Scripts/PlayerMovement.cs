@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    Animator anim;
+    //Animator anim;
 
     private PlayerController2D controller;
 
@@ -19,31 +18,35 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<PlayerController2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
-
 
     void Update()
     {
-        
-        if (CrossPlatformInputManager.GetButtonDown("Jump"))
-        {
-            anim.SetTrigger("Jump");
-            jump = true;
-        }
     }
 
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-
         if (col.gameObject.tag == "End")
             SceneManager.LoadScene("Level_Selector");
-
     }
+
+    public void PlayerJump ()
+    {
+        //anim.SetTrigger("Jump");
+        GetComponent<Animator>().SetBool("JumpP", true);
+        jump = true;
+    }
+
+    public void raquel()
+    {
+        Debug.Log("FODASSE");
+    }
+
 }
