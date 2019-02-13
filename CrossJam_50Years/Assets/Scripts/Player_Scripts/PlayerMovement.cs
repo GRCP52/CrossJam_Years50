@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 
-    //Animator anim;
+    Animator anim;
 
     private PlayerController2D controller;
 
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<PlayerController2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,14 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerJump ()
     {
-        //anim.SetTrigger("Jump");
-        GetComponent<Animator>().SetBool("JumpP", true);
+        anim.SetTrigger("Jump");
         jump = true;
-    }
-
-    public void raquel()
-    {
-        Debug.Log("FODASSE");
+        Debug.Log("Jump: " + jump);
     }
 
 }

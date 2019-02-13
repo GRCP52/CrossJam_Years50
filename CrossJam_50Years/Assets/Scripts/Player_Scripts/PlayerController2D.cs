@@ -57,9 +57,9 @@ public class PlayerController2D : MonoBehaviour
 
 	public void Move(float move, bool jump)
 	{
-		
-		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+        Debug.Log("Are you grounded: " + m_Grounded);
+        //only control the player if grounded or airControl is turned on
+        if (m_Grounded || m_AirControl)
 		{
 
 			// Move the character by finding the target velocity
@@ -83,6 +83,7 @@ public class PlayerController2D : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
+            Debug.Log("Salta Caralho");
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
