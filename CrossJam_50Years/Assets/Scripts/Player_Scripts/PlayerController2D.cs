@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class PlayerController2D : MonoBehaviour
 {
+    
+
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
@@ -57,7 +59,7 @@ public class PlayerController2D : MonoBehaviour
 
 	public void Move(float move, bool jump)
 	{
-        Debug.Log("Are you grounded: " + m_Grounded);
+        Debug.Log("Are you grounded:" + m_Grounded);
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
 		{
@@ -87,8 +89,9 @@ public class PlayerController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            jump = false;
 
-		}
+        }
 	}
 
 

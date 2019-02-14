@@ -12,13 +12,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float horizontalMove = 1f;
 
-    public bool jump = false;
+    public bool jump;
 
-
-    private void Awake()
+    void Start()
     {
         controller = GetComponent<PlayerController2D>();
         anim = GetComponent<Animator>();
+        jump = false;
     }
 
     void Update()
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        jump = false;
+        //jump = false;
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
     }
 
@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetTrigger("Jump");
         jump = true;
+        jump = false;
         Debug.Log("Jump: " + jump);
     }
 
