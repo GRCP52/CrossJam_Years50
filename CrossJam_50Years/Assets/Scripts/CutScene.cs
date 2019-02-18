@@ -10,6 +10,7 @@ public class CutScene : MonoBehaviour
     public Transform spot;
     public GameObject thePlayer;
     public GameObject emailPanel;
+    public GameObject emailPanel2;
 
     public bool playerStopped;
 
@@ -25,6 +26,7 @@ public class CutScene : MonoBehaviour
         {
             stopAnim.SetBool("Stop", true);
             emailPanel.SetActive(true);
+            //emailPanel2.SetActive(true);
         }
     }
 
