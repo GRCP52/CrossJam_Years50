@@ -30,8 +30,6 @@ public class F_Script : MonoBehaviour {
 
     private void DepressionUpdate ()
     {
-        //if (failed)
-        //    StartDepression();
 
         if (runSpeed == 0 && depressionDurationLeft <= 0)
             StopDepression();
@@ -48,7 +46,7 @@ public class F_Script : MonoBehaviour {
 
     private void StopDepression ()
     {
-        runSpeed = 40f;
+        runSpeed = 4f;
         failed = false;
     }
 
