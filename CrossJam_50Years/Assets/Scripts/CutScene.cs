@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CutScene : MonoBehaviour
 {
-    Animator stopAnim;
+    public Animator stopAnim;
 
     public Transform spot;
     public GameObject thePlayer;
