@@ -25,8 +25,8 @@ public class CutScene : MonoBehaviour
         if (col.gameObject.tag == "stopSpot")
         {
             stopAnim.SetBool("Stop", true);
-            emailPanel.SetActive(true);
-            //emailPanel2.SetActive(true);
+            //emailPanel.SetActive(true);
+            emailPanel2.SetActive(true);
         }
     }
 
