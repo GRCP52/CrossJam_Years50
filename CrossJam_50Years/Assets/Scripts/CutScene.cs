@@ -5,17 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class CutScene : MonoBehaviour
 {
+    Animator stopAnim;
 
     public Transform spot;
     public GameObject thePlayer;
     public GameObject emailPanel;
 
-    public bool playerStopped = false;
+    public bool playerStopped;
+
+    private void Start()
+    {
+        playerStopped = false;
+        stopAnim = GetComponent<Animator>();
+    }
 
     private void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "stopSpot")
         {
+            stopAnim.SetBool("Stop", true);
             emailPanel.SetActive(true);
         }
     }

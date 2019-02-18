@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController2D : MonoBehaviour
 {
-    Animator anim;
+    Animator jumpAnim;
 
     public bool jump;
 
@@ -24,7 +24,7 @@ public class PlayerController2D : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        jumpAnim = GetComponent<Animator>();
 
         jump = false;
     }
@@ -66,7 +66,7 @@ public class PlayerController2D : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
-            anim.SetTrigger("Jump");
+            jumpAnim.SetTrigger("Jump");
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
