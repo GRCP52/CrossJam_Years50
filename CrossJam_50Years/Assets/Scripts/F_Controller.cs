@@ -20,7 +20,8 @@ public class F_Controller : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    IEnumerator Moving() {
+    IEnumerator Moving()
+    {
         while (transform.position.x != spot.position.x && transform.position.y != spot.position.y)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(spot.position.x, transform.position.y), speed);
