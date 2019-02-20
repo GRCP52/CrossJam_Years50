@@ -9,8 +9,8 @@ public class CutScene : MonoBehaviour
 
     public Transform spot;
     public GameObject thePlayer;
+    public GameObject blurryPanel;
     public GameObject emailPanel;
-    public GameObject emailPanel2;
 
     public bool playerStopped;
 
@@ -25,8 +25,8 @@ public class CutScene : MonoBehaviour
         if (col.gameObject.tag == "stopSpot")
         {
             stopAnim.SetBool("Stop", true);
-            //emailPanel.SetActive(true);
-            emailPanel2.SetActive(true);
+            blurryPanel.SetActive(true);
+            emailPanel.SetActive(true);
         }
     }
 
