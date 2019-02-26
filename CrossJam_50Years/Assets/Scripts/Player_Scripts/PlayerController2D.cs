@@ -32,6 +32,10 @@ public class PlayerController2D : MonoBehaviour
     private void Update()
     {
         Move();
+
+        if (Input.GetKeyDown("space"))
+            PlayerJump();
+
     }
 
     private void FixedUpdate()
