@@ -53,7 +53,7 @@ public class GameManaging : MonoBehaviour {
             fail.GetComponent<F_Controller>().spot = destroySpot;
 
             fObstacleCooldown = Random.Range(3f, 6f);
-            fObstacleY = Random.Range(-1.9f, -1.4f);
+            fObstacleY = Random.Range(-1.9f, -1.6f);
             fObstacleTimer = Time.time + fObstacleCooldown;
         }
 
