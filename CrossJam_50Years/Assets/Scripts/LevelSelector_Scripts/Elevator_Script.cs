@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Elevator_Script : MonoBehaviour {
 
-public void SeventhFloor()
+    public void SixthFloor()
     {
-        SceneManager.LoadScene("7hFloor");
+        SceneManager.LoadScene("Floor6");
+    }
+
+    public void SeventhFloor()
+    {
+        SceneManager.LoadScene("Floor7");
     }
 }
