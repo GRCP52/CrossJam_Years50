@@ -9,6 +9,5 @@ public class LevelButtons : MonoBehaviour {
     public void LevelSelector()
     {
         elevatorPanels.SetActive(true);
-
     }
 }
