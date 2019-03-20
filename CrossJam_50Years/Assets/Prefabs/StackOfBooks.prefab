@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5933545879365812951}
   - component: {fileID: 5933545879365812950}
-  - component: {fileID: 8852316792805507893}
+  - component: {fileID: 6645873877065307105}
   m_Layer: 0
   m_Name: StackOfBooks
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8852316792805507893
+--- !u!61 &6645873877065307105
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5933545879365812945}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6b53847443d6bb4d9b6ae978bc13013, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -97,12 +97,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6685715, y: 1.1221429}
+    oldSize: {x: 0.624, y: 1.0473334}
     newSize: {x: 18.720001, y: 31.420002}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6685715, y: 1.1221429}
+  m_Size: {x: 0.624, y: 1.0473334}
   m_EdgeRadius: 0
