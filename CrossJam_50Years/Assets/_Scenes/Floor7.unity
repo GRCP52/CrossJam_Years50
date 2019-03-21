@@ -752,7 +752,7 @@ MonoBehaviour:
   fObstacle: {fileID: 1355586749041096, guid: adf3c7c294e60194980576b43ab28e5b, type: 3}
   mainCamera: {fileID: 519420032}
   destroySpot: {fileID: 1915069566}
-  counter: 70
+  counter: 50
   counterText: {fileID: 737581738}
 --- !u!4 &563151639
 Transform:
@@ -1678,6 +1678,21 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 3}
+      propertyPath: realVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 567
+      objectReference: {fileID: 0}
     - target: {fileID: 114215084523625044, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
         type: 3}
       propertyPath: runSpeed
@@ -1697,21 +1712,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-        type: 3}
-      propertyPath: realVelocity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039527619116792, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
-        type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 567
       objectReference: {fileID: 0}
     - target: {fileID: 114066692386805124, guid: fdc44f5fd4a68a549bf52158f1f48ab2,
         type: 3}
