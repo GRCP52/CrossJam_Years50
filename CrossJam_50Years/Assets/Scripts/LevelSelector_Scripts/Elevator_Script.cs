@@ -14,4 +14,9 @@ public class Elevator_Script : MonoBehaviour {
     {
         SceneManager.LoadScene("Floor7");
     }
+
+    public void GroundFloor()
+    {
+        SceneManager.LoadScene("_Main_Menu");
+    }
 }
